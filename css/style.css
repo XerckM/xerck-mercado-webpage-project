@@ -79,7 +79,12 @@ a{
 
 .right-pane a{
     font-size: 1.5rem;
-    padding: 10px;
+    width: 100px;
+}
+
+ul.projects a {
+    color: #fff;
+    font-size: 1.05rem;
 }
 
 /* pop up */
@@ -125,14 +130,14 @@ a{
 }
 
 /* animation */
-.left-pane a:hover, .right-pane a:hover {
+.left-pane a:hover {
     color: #fff;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .right-pane a:hover {
-    color: #000;
+    color: #101214;
     cursor: pointer;
     transition: 0.3s;
 }
