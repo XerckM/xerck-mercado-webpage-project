@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -18,34 +18,36 @@ body{
     color: #7A7C80;
 }
 
-h1,h2,.white{
+h1, h2, .white {
     color: #fff;
 }
 
-a{
+a {
     color: #7A7C80;
     text-decoration: none;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
 }
 
 /* left pane */
-.left-pane{
+.left-pane {
     position: absolute;
     text-align: center;
     width: 100%;
 }
 
-.left-pane p{
+.left-pane p {
     font-size: 1.1rem;
     padding-bottom: 20px;
-    margin:0;
+    margin: 0;
 }
 
-.left-pane h2{
+.left-pane h2 {
     font-size: 1.7rem;
     margin-bottom: 5px;
 }
 
-.left-pane a{
+.left-pane a {
     font-size: 1.5rem;
     padding: 10px;
 }
@@ -59,25 +61,25 @@ a{
     line-height: 1.5rem;
 }
 
-.right-pane h2{
+.right-pane h2 {
     color: #fff;
     font-size: 1.7rem;
     margin-bottom: 20px;
 }
 
-.right-pane p{
+.right-pane p {
     font-size: 1.1rem;
     padding-bottom: 10px;
     margin: 0;
     text-align: justify;
 }
 
-.right-pane i{
+.right-pane i {
     font-size: 1.5rem;
     padding: 10px;
 }
 
-.right-pane a{
+.right-pane a {
     font-size: 1.5rem;
     width: 100px;
 }
@@ -99,7 +101,7 @@ ul.projects a {
 }
 
 .popup-overlay {
-    background-color: rgb(0, 0, 0, 0.575);
+    background-color: rgba(0, 0, 0, 0.575);
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -118,6 +120,7 @@ ul.projects a {
     line-height: 1rem;
     justify-content: center;
     align-items: center;
+    -webkit-transform: translateX(100%);
     transform: translateX(100%);
 }
 
@@ -133,34 +136,54 @@ ul.projects a {
 .left-pane a:hover {
     color: #fff;
     cursor: pointer;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
 
 .right-pane a:hover {
     color: #101214;
     cursor: pointer;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
 
-.white:hover{
+.white:hover {
     position: relative;
     padding-left: 10px;
 }
 
 @keyframes slide-in {
     0% {
+        -webkit-transform: translateX(100%);
         transform: translateX(100%);
     }
     100% {
+        -webkit-transform: translateX(0%);
         transform: translateX(0%);
     }
 }
 
 @keyframes slide-out {
     0% {
+        -webkit-transform: translateX(0%);
         transform: translateX(0%);
     }
     100% {
+        -webkit-transform: translateX(100%);
         transform: translateX(100%);
     }
+}
+
+.popup-content.slide-in {
+    -webkit-animation: slide-in 0.5s ease;
+    animation: slide-in 0.5s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.popup-content.slide-out {
+    -webkit-animation: slide-out 0.5s ease;
+    animation: slide-out 0.5s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 }
